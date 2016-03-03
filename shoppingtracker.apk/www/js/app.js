@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('ionicApp', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,3 +22,21 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.controller('MyCtrl', function($scope, $timeout) {
+
+  $scope.items = [
+  {name: "Milk (1l)", price: 0.85 }, 
+  {name: "Milk (2l)", price: 1.45 },  
+  {name: "Sliced Loaf (White)", price: 0.70 }, 
+  {name: "Sliced Loaf (Brown)", price: 0.80 },
+  {name: "Sliced Loaf (White)", price: 2.05 }]; 
+
+  $scope.total=0;
+  $scope.title = "Shopping Calculator";
+
+  $scope.addAmount = function(itemValue) {
+    $scope.total += Number(itemValue);
+  };
+
+});
