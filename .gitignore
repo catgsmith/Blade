@@ -1,0 +1,19 @@
+# exclude specific
+*.zip
+*.bowerrc
+*.editorconfig
+node_modules/
+server/
+package.json
+server.js
+favicon.ico
+ionic.project
+bower.json
+config.xml
+gulpfile.js
+platforms/
+plugins/
+hooks/
+scss/
+ionic/
+resources/
