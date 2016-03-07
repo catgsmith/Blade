@@ -5,14 +5,17 @@
 
     function PricesCtrl(shoppingApi) {
         var vm = this;
-        
-        var data = shoppingApi.getAllItems();
 
-        console.log(data);
-        vm.items = data;
+        vm.total = 0; 
+        
+        vm.items = shoppingApi.getAllItems();
 
         vm.addItem = function(id) {
-            shoppingApi.addItemToCart(id);
+            vm.total = shoppingApi.addItemToCart(id);
+        };
+
+        vm.removeItem = function(id) {
+            vm.total = shoppingApi.removeItemFromCart(id);
         };
     }
 })();

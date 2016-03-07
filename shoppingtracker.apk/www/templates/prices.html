@@ -1,12 +1,16 @@
-<ion-view ng-controller="PricesCtrl as vm">
+<ion-view hide-back-button="true"  type="text/ng-template" ng-controller="PricesCtrl as vm">
+  <ion-header-bar>
+      <p id="total">Total: {{vm.total | currency: "€"}}</p>
+  </ion-header-bar>
+
   <ion-content class="has-header">
-    <div class="list">
-        <a class="item item-icon-right" ng-repeat="item in vm.items">
-            {{item.name}}
-            <button class="button button-positive" ng-click="addAmount(item.price)">{{item.price | currency: "€"}}</button>
-           <!--  <ion-option-button class="ion-minus-circled"></ion-option-button>
-            <ion-option-button class="button-assertive ion-pricetag"></ion-option-button> -->
-        </a>
-    </div>
+      <ion-list can-swipe="true">
+          <ion-item ng-repeat="item in vm.items" class="item-button-right item-avatar">
+              <img src="img/{{item.img_thumb}}">{{item.name}}
+              <button class="button button-positive" ng-click="vm.addItem(item.id)">{{item.price | currency: "€"}}</button>
+              <ion-option-button class="button-light icon ion-minus-circled" ng-click="vm.removeItem(item.id)"></ion-option-button>
+              <ion-option-button class="button-assertive icon ion-pricetag" ng-click="vm.setPrice(item.id)"></ion-option-button>
+          </ion-item>
+      </ion-list>
   </ion-content>
 </ion-view>
