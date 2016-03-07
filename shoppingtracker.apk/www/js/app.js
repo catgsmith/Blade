@@ -21,23 +21,23 @@ angular.module("shoppingApp", ["ionic"])
     .state('home', {
       abstract: true,
       url: "/home",
-      templateUrl: "home/home.html"
+      templateUrl: "templates/home.html"
     })
 
-    .state('home.leagues', {
+    .state('home.prices', {
       url: "/prices",
       views: {
         "tab-prices": {
-          templateUrl: "home/prices.html"
+          templateUrl: "templates/prices.html"
         }
       }
     })
 
-    .state('home.myteams', {
+    .state('home.cart', {
       url: "/cart",
       views: {
         "tab-cart": {
-          templateUrl: "home/cart.html"
+          templateUrl: "templates/cart.html"
         }
       }
     });
