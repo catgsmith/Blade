@@ -1,14 +1,16 @@
 (function () {
     'use strict';
 
-    angular.module('shoppingApp').controller('PricesCtrl', ['shoppingApi', PricesCtrl]);
+    angular.module('shoppingApp').controller('ItemsCtrl', ['shoppingApi', ItemsCtrl]);
 
-    function PricesCtrl(shoppingApi) {
+    function ItemsCtrl(shoppingApi) {
         var vm = this;
 
         vm.total = 0; 
         
         vm.items = shoppingApi.getAllItems();
+
+        vm.cartItems = shoppingApi.getCartItems();
 
         vm.addItem = function(id) {
             vm.total = shoppingApi.addItemToCart(id);

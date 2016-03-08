@@ -1,1 +1,10 @@
 /* Empty. Add your own CSS if you like */
+table {
+	border: 3px double black;
+}
+th{
+  text-align: center;
+}
+th,td {
+	border: 1px solid black;
+}

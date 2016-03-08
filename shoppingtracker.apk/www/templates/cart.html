@@ -1,5 +1,14 @@
-<ion-view>
+<ion-view hide-back-button="true"  type="text/ng-template" ng-controller="ItemsCtrl as vm">
   <ion-content class="has-header">
-    <h1>My Shopping Cart</h1>
+    <table>
+    <tr>
+        <th>Item</th>
+        <th>Quantity Bought</th>
+    </tr>
+        <tr ng-repeat="item in vm.cartItems" class="item-button-right item-avatar">
+            <td><img src="img/{{item.img_thumb}}"></td>
+            <td>{{item.qty}}</td>
+        </tr>
+    </table>
   </ion-content>
 </ion-view>
