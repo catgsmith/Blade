@@ -1,14 +1,21 @@
-<ion-view hide-back-button="true"  type="text/ng-template" ng-controller="ItemsCtrl as vm">
-  <ion-content class="has-header">
-    <table>
-    <tr>
-        <th>Item</th>
-        <th>Quantity Bought</th>
-    </tr>
-        <tr ng-repeat="item in vm.cartItems" class="item-button-right item-avatar">
-            <td><img src="img/{{item.img_thumb}}"></td>
-            <td>{{item.qty}}</td>
-        </tr>
-    </table>
-  </ion-content>
+<ion-view hide-back-button="true" type="text/ng-template" ng-controller="ItemsCtrl">
+    <ion-content class="has-header">
+    <div class="row"> <div class="col">
+        <div class="card" ng-hide="cart.items.length > 0">
+            <div class="item item-divider">
+                Your shopping cart is empty!
+            </div>
+        </div>
+        <table id="cart_table">
+            <tr ng-show="cart.items.length > 0">
+                <th>Item</th>
+                <th>Quantity Bought</th>
+            </tr>
+            <tr ng-repeat="item in cart.items">
+                <td><img src="img/{{item.img_thumb}}"></td>
+                <td>{{item.qty}}</td>
+            </tr>
+        </table>
+        </div></div>
+    </ion-content>
 </ion-view>

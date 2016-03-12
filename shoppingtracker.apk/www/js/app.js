@@ -21,7 +21,7 @@ angular.module("shoppingApp", ["ionic"])
     .state('home', {
       abstract: true,
       url: "/home",
-      templateUrl: "templates/home.html"
+      templateUrl: "templates/layout.html"
     })
 
     .state('home.prices', {
