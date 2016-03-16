@@ -11,6 +11,10 @@ angular.module("shoppingApp", ["ionic"])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    // Hide the splash screen as soon as the device is ready
+    if(window.navigator && window.navigator.splashscreen) {
+      window.navigator.splashscreen.hide();
+    }
   });
 })
 
