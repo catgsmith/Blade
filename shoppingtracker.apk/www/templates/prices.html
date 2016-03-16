@@ -5,7 +5,7 @@
 
   <ion-content class="has-header">
       <ion-list can-swipe="true">
-          <ion-item ng-repeat="item in items" class="itemPrices_ item-button-right item-avatar">
+          <ion-item ng-repeat="item in items" class="item-button-right item-avatar">
               <img src="img/{{item.img_thumb}}" alt="{{item.name}}">{{item.name}}
               <button class="button button-positive" ng-click="addItem(item.id)">{{item.price | currency: "€"}}</button>
               <ion-option-button class="button-light icon ion-minus-circled" ng-click="removeItem(item.id)"></ion-option-button>

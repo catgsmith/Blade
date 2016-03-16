@@ -18,7 +18,7 @@
         };
 
 
-           // When button is clicked, the popup will be shown...
+        // When change price button is clicked, the popup will be shown...
         $scope.setPrice = function(id) {
             $scope.data = {};
             $scope.priceIsError = false;

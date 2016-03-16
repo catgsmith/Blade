@@ -1,34 +1,29 @@
-/* Empty. Add your own CSS if you like */
-.itemPrices_ > .item-content > button {
-	position:absolute;
+/* push button to the right - even with swipe buttons further right*/
+.item {
+    padding: 0 !important;
 }
-.item-button-right {
-	padding-right: 10px;
-}
-.itemPrices_ > .item-content {
-	margin-right: 15px;
-}
-
 
 table {
-	border: 3px double black;
+    border: 3px double black;
 }
-th{
-  text-align: center;
-  padding: 10px;
+
+th {
+    text-align: center;
+    padding: 10px;
 }
-th,td {
-	font-size: 120%;
-	border: 1px solid black;
+
+th, td {
+    font-size: 120%;
+    border: 1px solid black;
 }
+
 td {
-	text-align: center;
-	font-size: 220%;
-	vertical-align: middle;
+    text-align: center;
+    font-size: 220%;
+    vertical-align: middle;
 }
+
 td > img {
-	max-height: 140px;
-    max-width: 140px;
+    max-height: 140px;
+    max-width: 140px;
 }
-
-

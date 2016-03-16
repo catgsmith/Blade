@@ -60,8 +60,7 @@
                     cartItem = item.getCartItem();
                     cart.total += item.price;
                     cart.items.push(cartItem);
-                    console.log("~Log: item added to cart - " + item.name);
-
+                    //console.log("~Log: item added to cart - " + item.name);
                 }
             }
         }
@@ -77,7 +76,7 @@
                     getItemById(id, cart.items, true);
                 }
             } else {
-              console.log("~Log: item not found in cart");
+              //console.log("~Log: item not found in cart");
             }
         }
 
@@ -92,7 +91,7 @@
             }
             item.price = newPrice;
             cart.total += diff;
-            console.log("Changed price for "+response.item.name+" : was " + oldPrice+" now "+newPrice);
+            //console.log("Changed price for "+response.item.name+" : was " + oldPrice+" now "+newPrice);
         }
 
 
